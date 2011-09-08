@@ -99,7 +99,7 @@ module DataMapper
       #   on given field
       def on(field_name)
         errors_for_field = errors[field_name]
-        DataMapper::Ext.blank?(errors_for_field) ? nil : errors_for_field.uniq
+        DataMapper::Ext.blank?(errors_for_field) ? [] : errors_for_field.uniq
       end
 
       def each
